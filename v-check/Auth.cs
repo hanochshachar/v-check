@@ -14,7 +14,7 @@ namespace v_check
 {
     internal class Auth
     {
-        public async Task<dynamic> Authorization()
+        public async Task<dynamic> Authorization(string username, string pass)
         {
             using (var httpClient = new HttpClient())
             {
@@ -24,8 +24,8 @@ namespace v_check
                     request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                     request.Content = new FormUrlEncodedContent(new Dictionary<string, string>
                     {
-                           { "username", "0556803386" },
-                           { "password", "5s3ARhRwFGeKPrY" },
+                           { "username", $"{username}" },
+                           { "password", $"{pass}" },
                            { "grant_type", "password" },
                            { "scope", "openid email phone profile offline_access roles" },
                     });

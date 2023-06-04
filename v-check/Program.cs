@@ -7,11 +7,11 @@ Auth auth = new Auth();
 
 
 /*Console.Write("enter user name: ");
-/* 0556803386 
+
 string uName = Console.ReadLine();
 
 Console.Write("enter password: ");
-/* 5s3ARhRwFGeKPrY 
+ 
 string pass = Console.ReadLine();
 
 await auth.Authorization(uName, pass);*/
